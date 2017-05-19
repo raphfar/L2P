@@ -1,10 +1,10 @@
 <?php  
     
-   require("conf/db.php")
+   require("config/db.php")
 
-    $request2 = $db->query('SELECT user_id, pseudo, elo, role, email path FROM user');
+    $request = $db->query('SELECT user_id, pseudo, elo, role, email path FROM user');
 
-    while ($data = $request2->fetch()) {
+    while ($data = $request->fetch()) {
      
 ?>
    <div class="row">

@@ -1,6 +1,6 @@
 <?php  
 
-    require("conf/db.php")
+    require("config/db.php")
         
     $request2 = $db->query('SELECT user_id, team_name, elo, line_up, path FROM Team');
 
