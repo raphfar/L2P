@@ -1,5 +1,6 @@
 <?php  
-
+    
+   require("conf/db.php")
 
     $request2 = $db->query('SELECT user_id, pseudo, elo, role, email path FROM user');
 
