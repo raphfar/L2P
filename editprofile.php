@@ -1,6 +1,6 @@
 <?php 
   session_start(); 
-  require("conf/db.php");
+  require("config/db.php");
 
 
     if (isset($_POST['email']) && !empty($_POST['email'])
@@ -9,7 +9,7 @@
       $email   = htmlspecialchars($_POST["email"]);
       $pseudo = htmlspecialchars($_POST["pseudo"]);
 
-        $request = $db->prepare('INSERT INTO posts (email, pseudo, password, elo, role) 
+        $request = $db->prepare('INSERT INTO Team (email, pseudo, password, elo, role) 
           VALUES (:email, :pseudo, :elo, :role, NOW(), :user_id)');
 
         $request->execute(
@@ -26,7 +26,7 @@ echo "merci de votre contribution.";
       }
 ?>
 
-  <form action="user.php" method="post">
+  <form action="editprofile.php" method="post">
     <fieldset>
       <legend><h4>Formulaire de contact</h4></legend>
       <br>

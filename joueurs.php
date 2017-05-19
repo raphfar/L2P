@@ -2,7 +2,7 @@
     
    require("config/db.php")
 
-    $request = $db->query('SELECT user_id, pseudo, elo, role, email path FROM user');
+    $request = $db->query('SELECT user_id, pseudo, elo, role, email path FROM Users');
 
     while ($data = $request->fetch()) {
      
