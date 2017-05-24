@@ -1,4 +1,5 @@
-signin.php<?php 
+<?php 
+session_start();
 require("config/db.php");
 include("header.php");
 include("head.php");

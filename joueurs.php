@@ -1,10 +1,19 @@
 <?php  
-    
-   require("config/db.php")
-   include("head.php");
+    session_start();
+   require("config/db.php");
    include("header.php");
+   include("head.php");
+   
 
-    $request = $db->query('SELECT user_id, pseudo, elo, role, email path FROM Users');
+   if (isset($_SESSION["user_id"])) {
+
+    $request = $db->prepare('SELECT user_id, pseudo, elo, role, email FROM Users');
+
+    $request->execute(
+        array(
+          "user_id" => $_SESSION['user_id']
+        )
+  );
 
     while ($data = $request->fetch()) {
      
@@ -23,4 +32,7 @@
             </div>
         </div>
         
- <?php  } ?>
+ <?php  }
+ }else{?>
+<p>connecte toi sarazin</p>
+<?php } ?>

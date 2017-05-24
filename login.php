@@ -1,43 +1,55 @@
 <?php
-
+session_start();
 require("config/db.php");
 include("header.php");
 include("head.php");
 
-if (isset($_POST['pseudo']) && !empty($_POST['pseudo'])
-	&& isset($_POST['password']) && !empty($_POST['password'])){
+if (isset($_POST["pseudo"]) 
+&&  isset($_POST["password"]))
+{
+  $pseudo   = htmlspecialchars($_POST["pseudo"]);
+  $password = htmlspecialchars($_POST["password"]);
+ 
 
-	session_unset();
-
-	$request = $db->prepare('SELECT id, pseudo, password FROM author 
-		WHERE pseudo = :pseudo');
-
-	$request->execute(
-		array(
-			'pseudo' => $_POST['pseudo']
+$request = $db->prepare("SELECT user_id FROM users WHERE pseudo LIKE :pseudo AND password = :password");
+$request->execute(
+	array(
+		"pseudo" => $pseudo,
+		"password"=> $password
 		)
-	);
 
-	while ($data = $request->fetch()){
-		if ($data['password'] == $_POST['password']){
-			$_SESSION['id_user'] = $data['id'];
-			$_SESSION['pseudo_user'] = $data['pseudo'];
+);
 
-			header('Location:admin.php');
-		}
-	}
+$users = $request->fetchAll();
 
-	$request->closeCursor();
+if (sizeof($users) >0){
 
-	echo "Pseudo et/ou mot de passe incorrects";
+	$user_id = $users[0]["id"];
+
+	$_SESSION["user_id"] = $user_id;
+
+	header("Location:joueurs.php");
+	
+	
 }
 
-include("menu.php");
+else {
+
+	echo "Try again !";
+}
+
+}
 
 ?>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion</title>
+     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/blog-home.css" rel="stylesheet"> 
+</head>
 <body>
-
    <div class="panel panel-primary">
        <div class="panel-heading"> Connexion </div><br>
     <form class="form-horizontal" action ="login.php" method="post">
@@ -73,3 +85,4 @@ include("menu.php");
 </form>
     </div>
 </body>
+</html>
