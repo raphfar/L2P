@@ -1,8 +1,5 @@
 <?php
-
-require("config/db.php");
-require("config/session.php");
-
+session_start();
 session_destroy();
 
 header('Location:index.php');

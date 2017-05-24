@@ -1,7 +1,8 @@
 <?php
 
 require("config/db.php");
-require("config/session.php");
+include("header.php");
+include("head.php");
 
 if (isset($_POST['pseudo']) && !empty($_POST['pseudo'])
 	&& isset($_POST['password']) && !empty($_POST['password'])){
@@ -35,8 +36,40 @@ include("menu.php");
 
 ?>
 
-<form action="login.php" method="post">
-	<input type="text" name="pseudo" placeholder="Pseudo"/><br>
-	<input type="password" name="password" placeholder="Password"/><br>
-	<input type="submit" value="Connexion" />
+<body>
+
+   <div class="panel panel-primary">
+       <div class="panel-heading"> Connexion </div><br>
+    <form class="form-horizontal" action ="login.php" method="post">
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="pseudoinput">Pseudo</label>  
+  <div class="col-md-4">
+  <input id="pseudo" name="pseudo" type="text" placeholder="pseudo" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Password input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="passwordinput">Mot de passe</label>
+  <div class="col-md-4">
+    <input id="password" name="password" type="password" placeholder="password" class="form-control input-md" required="">
+    
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-5 control-label" for="singlebutton"></label>
+  <div class="col-md-5">
+    <button id="singlebutton" name="singlebutton" class="btn btn-primary">Log in</button>
+  </div>
+</div>
+
+
 </form>
+    </div>
+</body>

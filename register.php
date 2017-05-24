@@ -1,9 +1,9 @@
 <?php
 
 require("config/db.php");
-require("config/session.php");
+include("head.php");
+include("header.php");
 
-include("menu.php");
 
 if (isset($_POST['pseudo']) && !empty($_POST['pseudo'])
 	&& isset($_POST['password']) && !empty($_POST['password'])

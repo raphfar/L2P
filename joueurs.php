@@ -1,6 +1,8 @@
 <?php  
     
    require("config/db.php")
+   include("head.php");
+   include("header.php");
 
     $request = $db->query('SELECT user_id, pseudo, elo, role, email path FROM Users');
 
