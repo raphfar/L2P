@@ -3,7 +3,7 @@
 $host = 'localhost';
 $db_name = 'projet_fin';
 $user = 'root';
-$password = 'root';
+$password = '';
 
 try {
 	$db = new PDO ("mysql:dbname=".$db_name.";host=".$host, $user, $password);

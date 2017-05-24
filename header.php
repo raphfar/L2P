@@ -33,5 +33,3 @@ include("head.php");
                  
         </div><!-- /.navbar-collapse -->
           </nav>
-    </body>
-</html>
