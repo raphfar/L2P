@@ -5,7 +5,6 @@
    include("head.php");
    
 
-   if (isset($_SESSION["user_id"])) {
 
     $request = $db->prepare('SELECT user_id, pseudo, elo, role, email FROM Users');
 
@@ -33,6 +32,4 @@
         </div>
         
  <?php  }
- }else{?>
-<p>connecte toi sarazin</p>
-<?php } ?>
+ ?>
