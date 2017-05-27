@@ -32,14 +32,25 @@ body{
 }
 
 .sign {
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .position {
     margin-top: 2%;
+    font-size: 125%;
 }
 
-.sign-button {
-    margin-left: auto;
-    margin-right: auto;
+.white-text {
+    color: #fff;
+    margin-top: 2%;
+}
+
+.user {
+    padding-top: 5%;
+    margin-bottom: -5%;
+    text-align: center;
+}
+
+.user-info {
+    text-align: center;
 }

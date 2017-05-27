@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("header.php");
+include("navbar.php");
 
 if (isset($_POST["pseudo"])
     && isset($_POST["password"])
@@ -27,7 +27,6 @@ if (isset($_POST["pseudo"])
     } else {
         echo "Try again !";
     }
-
 }
 
 ?>
@@ -42,7 +41,7 @@ if (isset($_POST["pseudo"])
                 <div class="form-group">
                     <label class="col-md-4 control-label position" for="pseudoinput">Pseudo</label>
                     <div class="col-md-4">
-                        <input id="pseudo" name="pseudo" type="text" placeholder="..." class="form-control input-md"
+                        <input id="pseudo" name="pseudo" type="text" placeholder="..." class="form-control input-md white-text"
                                required="">
 
                     </div>
@@ -53,7 +52,7 @@ if (isset($_POST["pseudo"])
                     <label class="col-md-4 control-label position" for="passwordinput">Mot de passe</label>
                     <div class="col-md-4">
                         <input id="password" name="password" type="password" placeholder="..."
-                               class="form-control input-md" required="">
+                               class="form-control input-md white-text" required="">
 
                     </div>
                 </div>

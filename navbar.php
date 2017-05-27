@@ -18,10 +18,9 @@ include("header.php");
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="histoire.php">Histoire</a></li>
-                <li><a href="photos.php">Photos</a></li>
-                <li><a href="videos.php">Vidéos</a></li>
-                <li><a href="contact.php">Contact</a></li>
+                <li><a href="editprofile.php">Profil</a></li>
+                <li><a href="joueurs.php">Joueurs</a></li>
+                <li><a href="teams.php">Teams</a></li>
             </ul>
         </div>
     </div>

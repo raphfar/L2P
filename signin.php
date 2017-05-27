@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("header.php");
+include("navbar.php");
 
 if (isset($_POST["pseudo"])
     && isset($_POST["password"])
@@ -56,15 +56,15 @@ if (isset($_POST["pseudo"])
 
 <body>
 
-<div class="row">
-    <div class="col s6 offset-s3 sign">
+<div class="row sign">
+    <div class="col s6 offset-s3">
         <form class="form-horizontal" action="signin.php" method="post">
             <fieldset>
                 <!-- Text input-->
                 <div class="form-group">
                     <label class="col-md-4 control-label position" for="pseudoinput">Pseudo</label>
                     <div class="col-md-4">
-                        <input id="pseudo" name="pseudo" type="text" placeholder="..." class="form-control input-md"
+                        <input id="pseudo" name="pseudo" type="text" placeholder="..." class="form-control input-md white-text"
                                required="">
                     </div>
                 </div>
@@ -73,7 +73,7 @@ if (isset($_POST["pseudo"])
                 <div class="form-group">
                     <label class="col-md-4 control-label position" for="emailinput">Email</label>
                     <div class="col-md-4">
-                        <input id="email" name="email" type="email" placeholder="..." class="form-control input-md"
+                        <input id="email" name="email" type="email" placeholder="..." class="form-control input-md white-text"
                                required="">
                     </div>
                 </div>
@@ -83,7 +83,7 @@ if (isset($_POST["pseudo"])
                     <label class="col-md-4 control-label position" for="passwordinput">Password</label>
                     <div class="col-md-4">
                         <input id="password" name="password" type="password" placeholder="..."
-                               class="form-control input-md" required="">
+                               class="form-control input-md white-text" required="">
                     </div>
                 </div>
 
@@ -91,7 +91,7 @@ if (isset($_POST["pseudo"])
                 <div class="form-group">
                     <label class="col-md-4 control-label position" for="eloinput">Elo</label>
                     <div class="col-md-4">
-                        <input id="elo" name="elo" type="text" placeholder="..." class="form-control input-md"
+                        <input id="elo" name="elo" type="text" placeholder="..." class="form-control input-md white-text"
                                required="">
                     </div>
                 </div>
@@ -100,7 +100,7 @@ if (isset($_POST["pseudo"])
                 <div class="form-group">
                     <label class="col-md-4 control-label position" for="roleinput">Rôle</label>
                     <div class="col-md-4">
-                        <input id="role" name="role" type="text" placeholder="..." class="form-control input-md"
+                        <input id="role" name="role" type="text" placeholder="..." class="form-control input-md white-text"
                                required="">
                     </div>
                 </div>
