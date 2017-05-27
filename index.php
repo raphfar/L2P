@@ -2,6 +2,8 @@
 include("navbar.php");
 ?>
 
+    <body>
+
     <a href="signin.php">s'enregisrer un compte</a> <br>
     <a href="login.php">se connecter</a> <br>
     <a href="logout.php">se déconnecter</a> <br>

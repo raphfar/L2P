@@ -1,5 +1,11 @@
+html {
+    height: 100%;
+}
+
 body{
-    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    min-height: 100%;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%) no-repeat center center fixed;
+    background-size: 100% 100%;
 }
 
 .nav {
@@ -23,4 +29,17 @@ body{
 
 .page-footer {
     background-color: #01d4b1 !important;
+}
+
+.sign {
+    margin-top: 10%;
+}
+
+.position {
+    margin-top: 2%;
+}
+
+.sign-button {
+    margin-left: auto;
+    margin-right: auto;
 }
