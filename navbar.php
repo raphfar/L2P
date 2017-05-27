@@ -21,6 +21,9 @@ include("header.php");
                 <li><a href="editprofile.php">Profil</a></li>
                 <li><a href="joueurs.php">Joueurs</a></li>
                 <li><a href="teams.php">Teams</a></li>
+                <li><a href="signin.php">S'enregistrer</a></li>
+                <li><a href="login.php">Se connecter</a></li>
+                <li><a href="logout.php">Déconnexion</a></li>
             </ul>
         </div>
     </div>
