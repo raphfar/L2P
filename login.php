@@ -61,7 +61,7 @@ if (isset($_POST["pseudo"])
                 <div class="form-group">
                     <label class="col-md-4 control-label" for="singlebutton"></label>
                     <div class="col-md-4 text-center">
-                        <button id="singlebutton" name="singlebutton" class="btn btn-primary">Log in</button>
+                        <button id="singlebutton" name="singlebutton" class="btn btn-primary">Connexion</button>
                     </div>
                 </div>
             </fieldset>
