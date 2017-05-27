@@ -1,7 +1,7 @@
 <?php 
   session_start(); 
   require("config/db.php");
-  include("head.php");
+  include("header.php");
 
 
     if (isset($_POST['email']) && !empty($_POST['email'])

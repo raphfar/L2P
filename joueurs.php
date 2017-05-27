@@ -1,8 +1,8 @@
 <?php  
     session_start();
    require("config/db.php");
+   include("navbar.php");
    include("header.php");
-   include("head.php");
    
 
 

@@ -1,8 +1,8 @@
 <?php 
 session_start();
 require("config/db.php");
+include("navbar.php");
 include("header.php");
-include("head.php");
 
 
 
@@ -62,8 +62,8 @@ else{
 <head>
     <meta charset="UTF-8">
     <title>Sign in</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/blog-home.css" rel="stylesheet"> 
+    <link href="style/bootstrap.min.css" rel="stylesheet">
+    <link href="style/blog-home.css" rel="stylesheet">
 </head>
 <body>
     
