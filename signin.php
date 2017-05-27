@@ -55,6 +55,7 @@ if (isset($_POST["pseudo"])
 ?>
 
 <body>
+
 <div class="row">
     <div class="col s6 offset-s3 sign">
         <form class="form-horizontal" action="signin.php" method="post">
@@ -117,7 +118,9 @@ if (isset($_POST["pseudo"])
 </div>
 
 <div class="col-md-12 text-center">
-    <a href="index.php"><button id="singlebutton" name="singlebutton" class="btn btn-primary">Retour</button></a>
+    <a href="index.php">
+        <button id="singlebutton" name="singlebutton" class="btn btn-primary">Retour</button>
+    </a>
 </div>
 
 </body>
