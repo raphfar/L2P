@@ -1,7 +1,6 @@
 <?php 
   session_start(); 
-  require("config/db.php");
-  include("header.php");
+  include("navbar.php");
 
 
     if (isset($_POST['email']) && !empty($_POST['email'])
@@ -38,4 +37,8 @@ echo "merci de votre contribution.";
         <input type="submit" value="Envoyer"/>
     </fieldset>
   </form>
-<a href='index.php'>home</a>
+<a href='index.php'>Retour</a>
+
+<?php
+include("footer.php");
+?>

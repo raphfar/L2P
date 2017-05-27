@@ -29,3 +29,7 @@ $request->execute(
 
 <?php }
 ?>
+
+<?php
+include("footer.php");
+?>
