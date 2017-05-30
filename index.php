@@ -12,7 +12,7 @@ include("navbar.php");
                 <div class="card-image">
                     <a href="joueurs.php"><img src="img/equipe.png"></a>
                     <span class="card-title">Joueur</span>
-                    <a class="waves-effect waves-light btn">
+                    <a href="joueurs.php" class="waves-effect waves-light btn">
                         <i class="material-icons">Joueur</i>
                     </a>
                 </div>
@@ -27,7 +27,7 @@ include("navbar.php");
                 <div class="card-image">
                     <a href="teams.php"><img src="img/joueur.png"></a>
                     <span class="card-title">Equipe</span>
-                    <a class="center-align waves-effect waves-light btn">
+                    <a href="teams.php" class="center-align waves-effect waves-light btn">
                         <i class="material-icons">Equipe</i>
                     </a>
                 </div>
